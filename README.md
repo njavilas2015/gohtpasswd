@@ -4,10 +4,10 @@
 
 Para instalar `gohtpasswd`, puedes descargar el binario desde el siguiente enlace:
 
-- [Descargar gohtpasswd](https://github.com/njavilas2015/gohtpasswd/releases/download/1.0.0/gohtpasswd)
+- [Descargar gohtpasswd](https://github.com/njavilas2015/gohtpasswd/releases/download/1.0.1/gohtpasswd)
 
 ```bash
-wget https://github.com/njavilas2015/gohtpasswd/releases/download/1.0.0/gohtpasswd
+wget https://github.com/njavilas2015/gohtpasswd/releases/download/1.0.1/gohtpasswd
 ```
 
 Después de descargar, asegúrate de que el binario sea ejecutable y mueve el archivo a un directorio en tu `PATH`:
