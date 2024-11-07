@@ -21,11 +21,13 @@ func CreateHtpasswdEntry(username, password string) (string, error) {
 	return entry, nil
 }
 
-func ParseFlags() (*string, *string) {
+func ParseFlags() (*string, *string, *bool) {
 
 	username := flag.String("username", "", "username")
 
 	password := flag.String("password", "", "password")
+
+	print := flag.Bool("print", false, "print")
 
 	flag.Parse()
 
@@ -39,17 +41,24 @@ func ParseFlags() (*string, *string) {
 		os.Exit(1)
 	}
 
-	return username, password
+	return username, password, print
 }
 
 func main() {
 
-	username, password := ParseFlags()
+	username, password, print := ParseFlags()
 
 	entry, err := CreateHtpasswdEntry(*username, *password)
 
 	if err != nil {
 		fmt.Println("Error creating htpasswd entry:", err)
+		return
+	}
+
+	if *print {
+
+		fmt.Printf("hash: %s", entry)
+
 		return
 	}
 
