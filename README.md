@@ -21,7 +21,7 @@ sudo mv gohtpasswd /usr/local/bin/
 Para usar `gohtpasswd`, puedes ejecutar el siguiente comando en la terminal:
 
 ```bash
-gohtpasswd --username njavilas --password holaconfig
+gohtpasswd --username njavilas --password holaconfig --print
 ```
 
 ## Build
